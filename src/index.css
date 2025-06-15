@@ -149,6 +149,14 @@
   animation: fadeIn 1s ease-in;
 }
 
+.welcome-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  animation: fadeIn 1.2s ease-in;
+}
+
 .welcome-title {
   font-size: 2.5rem;
   font-weight: 700;

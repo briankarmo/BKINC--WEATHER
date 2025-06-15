@@ -1,5 +1,6 @@
 import hotBg from "./assets/hot.png";
 import coldBg from "./assets/cold.png";
+import bkinclogo from "./assets/bkinclogo.png";
 import Descriptions from "./components/Descriptions";
 import { useEffect, useState } from "react";
 import { getFormattedWeatherData } from "./weatherService";
@@ -50,10 +51,13 @@ function App() {
     <div className="app" style={{ backgroundImage: `url(${bg})` }}>
       <div className="overlay">
         <div className="container">
-          <div className="welcome-section max-width-centered">
-            <h1 className="welcome-title">Welcome to BK INC. WEATHER</h1>
-            <p className="welcome-subtitle">Your trusted source for accurate weather information</p>
-          </div>
+          {!weather && (
+            <div className="welcome-section max-width-centered">
+              <img src={bkinclogo} alt="BK Inc Logo" className="welcome-logo" />
+              <h1 className="welcome-title">Welcome to BK INC. WEATHER</h1>
+              <p className="welcome-subtitle">Your trusted source for accurate weather information</p>
+            </div>
+          )}
 
           <div className="section section__inputs max-width-centered">
             <input
